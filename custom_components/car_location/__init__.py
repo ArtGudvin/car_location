@@ -78,7 +78,7 @@ class CarGPS:
 
     async def getInfoFrom(self):
         today = int(datetime.now().strftime("%s")) * 1000
-        url = 'https://livegpstracks.com/viewer_coos_s.php?username=' + str(self._user) + '&ctp=one&code=' + str(self._myid) + '&tgst=site&tgsv=12&tkv11=' + str(today)
+        url = 'https://livegpstracks.ru/viewer_coos_s.php?username=' + str(self._user) + '&ctp=one&code=' + str(self._myid) + '&tgst=site&tgsv=12&tkv11=' + str(today)
         async with ClientSession() as session:
             async with session.get(url) as response:
                 response = await response.read()
